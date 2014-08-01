@@ -1,0 +1,224 @@
+
+.general #getlevel {
+    width: 5.47em; 
+    height: 1em;
+    margin:  1em 0.6em 1em;
+    padding-top: 0.2em;
+    border: 1px solid #E6B800;
+    box-shadow: inset 0 0 10px #030A26;
+    color: #000000;
+    background: #CCC;
+}
+
+.general select {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left;
+    background: #CCC;
+    background-image: url(../images/dropdown_arrow_2.png);
+    background-position: 137px center;
+    background-repeat: no-repeat;
+    border: 1px solid #C5AF8A;
+}
+
+.level-options {
+    cursor:pointer;
+    text-indent: .01px;  /*hides the default arrow of the select box*/
+    text-overflow: "";   /*hides the default arrow of the select box*/
+}
+
+ .general .level-options {
+    width: 6.5em;
+    height: 1.6em;
+    display: inline;
+    margin-top: -2.85em;
+    position: absolute;
+}
+
+.general #min {
+    margin-left: 8.6em;
+}
+
+.general #max {
+    margin-left: 16.3em;
+}
+
+.general #text-fields input {
+    width: 2em; 
+    height: 0.8em;  
+    margin-left: 0.52em;
+    border: 1px solid #E6B800;
+    background: #CCC;
+    box-shadow: inset 0 0 10px #030A26;
+    color: #000000;
+}
+
+input[type="text"] {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.general #grouptext {
+    position: relative;
+    margin-left: 0;
+    margin-top: 0;
+    border: 1px solid #755335;
+    border-radius: 0.5em;
+    background-color: #0B0C0D;
+    width: auto;
+    height: auto;
+    font-size: 1.2em;
+    color: #7A7A7A;
+    line-height: 100%;
+    z-index: -1;
+}
+
+.general #displayText {
+    font-family: sans-serif, Verdana;
+    background: #171715;
+    color: #999999;                              
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.genetal #displayText2 {
+    font-weight: 300 ;
+}
+
+.general #displayText5 {
+    font-family: sans-serif, Verdana;
+    background: #171715;
+    color: #999999;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+.buttons { 
+    height: 2.2em;
+    color: #43444A;
+    margin-top: 5em;
+    border: 1px solid #2A2B30;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+}
+
+#button1 {
+    width: 7em;
+    background: #000000;
+}
+
+#resetbutton {
+    margin-left: 10em;
+    width: 5em;
+    background: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+margin-top: 2em;
+margin-left: -1.8em;
+background: #00141A;
+}
+
+nav ul li{
+    display: inline;
+    padding: 1em;
+}
+
+ul li a {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-decoration: none;
+    color: #999999;
+}
+
+a:visited {
+    color: #999999;
+}
+
+a:hover {
+    color: #8D8D8D;
+    background: #000000;
+}
+
+a:active {
+    color: #FFD6CC;
+}
+
+#grouptext #img {
+    position: relative;
+}
+
+img {
+    display: block;
+    width: 532px;
+    height: 430px;
+    margin-top: -32px;
+    margin-bottom: -34px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grouptext #novo {
+    position: relative;
+    font-family: sans-serif, Verdana;
+    font-weight: 300;
+    line-height: 150%;
+    padding-left: 0.3;
+}
+
+#grouptext #novo2 { 
+    position: relative;
+    font-family: sans-serif, Verdana;
+    font-weight: 300;
+    padding-left: 0;
+}
+
+#grouptext #novo3 {
+    position: relative;
+    font-family: sans-serif, Verdana;
+    font-weight: 300;
+    padding-left: 0.3em;
+    line-height: 150%;
+}
+
+#displayText5 {
+    position: relative;
+}
+
+#displayText {
+position: relative;
+}
+
+#displayText2 {
+    position: relative;
+}
+
+::-webkit-input-placeholder {
+    color: #A1A1A1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #8A8A8A;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #8A8A8A;  
+}
+
+:-ms-input-placeholder {  
+   color: #A1A1A1;  
+}
+
+

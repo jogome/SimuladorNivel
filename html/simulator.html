@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Input Text Fields Code Snippet</title>
+  <link rel="stylesheet" href="../css/inputText.css" media="screen" />
+  <link rel="stylesheet" href="../css/medscreen.css" media="only screen and (min-width: 600px)">
+  <link rel="stylesheet" href="../css/ibombas.css" media="screen" />
+  <script type="text/javascript" src="../javascript/simulator.js"></script>
+  <script type="text/javascript" src="../javascript/simulator_2.js"></script>
+</head>
+<body class="general">
+
+  <form name="actualevel" id="actual-level"> 
+     <input type="text" name="level" value="" id="getlevel" placeholder="Act. Level" />
+  </form>
+
+  <form name="minselect">
+    <select name="leveloption_1" class="level-options" id="min">
+       <option  value="400">Min: 0400</option>
+       <option  value="500">Min: 0500</option>
+       <option  value="600" selected="selected">Min: 0600</option>
+       <option  value="700">Min: 0700</option>
+       <option  value="800">Min: 0800</option>
+       <option  value="900">Min: 0900</option>
+     </select>
+     
+     <select class="level-options" id="max">
+       <option  value="1300" selected="selected">Max: 1300</option>
+       <option  value="1200">Max: 1200</option>
+       <option  value="1100">Max: 1100</option>
+       <option  value="1000">Max: 1000</option>
+       <option  value="900">Max: 0900</option>
+       <option  value="800">Max: 0800</option>
+     </select>
+  </form>
+
+  <form name="textfields" id="text-fields"><p>
+    <input type="text" name="ro" value="" id="ro1" class="boxesproduction" placeholder="RO1:" />
+    <input type="text" name="ro" value="" id="ro2" class="boxesproduction" placeholder="RO2:" />
+    <input type="text" name="ro" value="" id="ro3" class="boxesproduction" placeholder="RO3:" />
+    <input type="text" name="ro" value="" id="ro4" class="boxesproduction" placeholder="RO4:" />
+    <input type="text" name="ro" value="" id="ro5" class="boxesproduction" placeholder="RO5:" />
+    <input type="text" name="ro" value="" id="ro6" class="boxesproduction" placeholder="RO6:" />
+  </p></form>
+  
+<!--FRESH WATER TRANSFER PUMP STATION -->
+<form name="boxes" id="check-box">
+<div id="pumps">
+    <input type="checkbox"/>
+    <label>Estação Velha</label>
+
+    <!--FORMER TRANSFER STATION -->
+    <section>
+     <!-- <form name="boxes" id="check-box"> -->
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 01a flow = 060" id="p1" />
+	    <label>Fort - Pump 1</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 02a flow = 060" id="p2" />
+            <label>Fort - Pump 2</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 03a flow = 060" id="p3" />
+            <label>Fort - Pump 3</label>
+        </div>
+	 <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 04a flow = 070" id="p4" />
+            <label>M.S. - Pump 4</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 05a flow = 080" id="p5" />
+            <label>M.S. - Pump 5</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 06a flow = 075" id="p6" />
+            <label>Cruz - Pump 6</label>
+        </div>
+	 <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 07a flow = 110" id="p7" />
+            <label>Cruz - Pump 7</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 08a flow = 110" id="p8" />
+            <label>M.S. - Pump 8</label>
+        </div>
+		<!--</form>-->
+    </section>
+
+</div>
+
+<!--NEW TRANSFER STATION-->
+
+<div id="nova">
+    <input type="checkbox"/>
+    <label>Estação Nova</label>
+
+    <section>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 01b flow = 110" id="p9" />
+            <label>Cruz - Pump 1</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 02b flow = 110" id="p10" />
+            <label>Cruz - Pump 2</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 03b flow = 110" id="p11" />
+            <label>Cruz - Pump 3</label>
+        </div>
+	 <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 04b flow = 110" id="p12" />
+            <label>M.S. - Pump 4</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 05b flow = 110" id="p13" />
+            <label>M.S. - Pump 5</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 06b flow = 110" id="p14" />
+            <label>M.S. - Pump 6</label>
+        </div>
+	 <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 07b flow = 065" id="p15" />
+            <label>Fort - Pump 7</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 08b flow = 065" id="p16" />
+            <label>Fort - Pump 8</label>
+        </div>
+	<div class="selection">
+            <input type="checkbox" name="pump" value="Pump number 09b flow = 065" id="p16" />
+            <label>Fort - Pump 9</label>
+        </div>
+    </section>
+
+</div>
+</form>
+  <button onClick="waterProduction.generalCall()" class="buttons" id="button1">Simulate</button> 
+ <button value="Reset" onClick="waterProduction.resetCall();" id="resetbutton" class="buttons">Reset</button><p>
+
+<nav>
+  <ul>
+    <li id="about"><a href="#" onClick="about();">About</a></li>
+    <li id="howto"><a href="#" onClick="howto()">How to</a></li>
+    <li id="information"><a href="#" onClick="informations()">Informations</a></li>
+  </ul>
+</nav>
+
+<div id="grouptext">
+  <div id="img"><img src="../images/pump_station3.jpg" alt="Casa das Bombas de Transferencia." class="pumpstaton"></div>
+  <div id="novo"></div>
+  <div id="novo2"></div>
+  <div id="novo3"></div>
+  <div id="displayText"></div>
+  <div id="displayText2"></div>
+  <div id="displayText3"></div>
+  <div id="displayText4"></div>
+  <div id="displayText5"></div>
+</div>
+</body>
+</html>
+

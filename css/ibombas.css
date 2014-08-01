@@ -1,0 +1,113 @@
+#nova {
+position: absolute;
+float: right;
+margin-left: 17.5em;
+}
+
+div { position: absolute;} /*relative*/
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: 999; /*so you can click on the :after */
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 2em; 
+    opacity: 0;
+    
+}
+
+section {
+   margin-top: -2px;
+   height: 0;
+   overflow: hidden;
+   max-height: 0;
+   -webkit-transition: 1s all;
+}
+
+label:after {
+    content: url(../images/pump.gif);      /*'▾';*/
+    position: absolute;
+    right: 0;    /*.5em*/
+    top: -0.23em; /*0*/
+}
+
+input[type="checkbox"]:active + label {
+  background: #ccc;
+}
+
+input[type="checkbox"]:checked ~ section {
+    height: auto;
+    max-height: 21em;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: url(../images/pump.gif)  /*'x'*/;
+}
+
+.selection {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+
+/*era radio*/
+input[type="checkbox"]:checked + label {
+    background: #333;
+    color: white;
+}
+
+/*era raio*/
+input[type="checkbox"]:checked + label:after {
+    position: absolute;
+    right: .5em;
+    top: .25em;
+    content: '✓';
+}
+
+/* Non-Important Styling. Mooooove, get out the way */
+
+div {
+  	 margin: 2em .9em;
+    font-family: helvetica neue;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    background: #CCCCCC; /*eee*/
+    color: #333;
+    text-align: left;
+    font-size: 1.25em;
+    line-height: 2em;
+    padding: 0 .5em;
+    border-radius: 5px;
+    width: 9.5em;
+}
+label:after { font-size: 1.25em }
+section {
+   background: #ccc; /*eee*/
+   color: #333;
+  border-radius: 0 0 5px 5px;
+}
+section:after {
+    color: #666;
+    font-size: 1.75em;
+}
+.selection label:after { content: ''; }
+.selection label {
+    display: block;
+    font-size: .875em;
+    line-height: 2em;
+    padding: .25em .5em;
+    margin: 0;
+    text-align: left;
+    background: #ccc; /*eee*/
+    border-radius: 0;
+    border: 1px solid #D1D1E0;
+}
+.selection:last-child label {
+  border-radius: 0 0 5px 5px;
+}

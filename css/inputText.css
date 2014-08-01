@@ -1,0 +1,55 @@
+body {
+    background-color: #000000;
+    font-family: sans-serif, Verdana;
+}
+
+.general #getlevel {
+    background-color: #E6FAFF;
+    margin:  1em 1em 1em;
+    padding-top: 0.2em;
+    border: 1px solid #5A6E73;
+}
+
+.general #text-fields input {
+    width: 2.4em;
+    height: 1.2em;
+    padding: 0.17em;
+    margin-left: 1em;
+}
+
+
+.general #pumps input {
+   margin-left: 0.42em;
+   margin-top: 1em;
+}
+
+.general #grouptext {
+    border: 1px solid #755335;
+    border-radius: 0.5em;
+    background-color: #DCF1F2;
+}
+
+.general #grouptext #displayText2 {
+    padding-left: 0.8em;
+}
+.general #grouptext #displayText3 {
+    padding-left: 0.8em;
+}
+.general #grouptext #displayText4 {
+    padding-left: 0.8em;
+}
+
+
+
+.buttons {
+    background-color: #ABB5F5; 
+    height: 1.8em;
+    color: #657478;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+#resetbutton {
+    margin-left: 1.4em;
+}
+

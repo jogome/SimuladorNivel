@@ -1,0 +1,242 @@
+
+var  waterProduction = {
+    // Units in production line and total production flow.
+    counter_1: false,
+    counter_2: false,
+    counter_3: false, 
+    
+    // UNITS IN PRODUCTION LINE AND THE PRODUCTION SUM.
+    production: function(groups) {
+	var placeToText = document.getElementById("displayText");
+	var placeToText3 = document.getElementById("displayText3");
+	var productions = "Units in Action and Actual Production is: "; 
+  	var inProductionLine = []; 
+	this.counter_1 = 0;
+  	var unitiesNumber = 0;
+        // Cicles throw input boxes searching for production values
+	// of each Units production, and push the values to an array: the inProductionLine.
+  	for (var i = 0; i < groups.elements.length; i++) {
+	    inProductionLine.push(+groups.elements[i].value);
+	    // Makes a sum of each units production value in the array.
+	    this.counter_1 += inProductionLine[i];
+	    // Finds the number or Units in Production line.
+	    if (inProductionLine[i] !== 0) {
+		unitiesNumber += 1
+	    }                                 
+	}
+	// Singular/plural case when 0 or only one Unit is in Line Production, or more than one.
+	if (unitiesNumber <= 1) {
+	    productions = productions.replace("Units", "Unit");
+	}
+
+	if (isNaN(this.counter_1)) {
+	    placeToText.innerHTML = "Check field RO!";
+	}
+	else {
+	placeToText.innerHTML = "&nbsp" + unitiesNumber + " " + productions + this.counter_1 + " t/h" + "<br><p>"; 
+	    }
+    },
+
+    // PUMPS AVAILABLE FOR WATER TRANSFER AND CHECKED PUMPS AND RESPECTIVE FLOW.
+    activePumps: function(group) {                          	
+	// Pumps available to transfer the water
+	var pump1;
+	var pump2;
+	var pump3;
+	var pump4;
+	var pump5;
+	var pump6;
+	var pump7;
+	var pump8;
+	var pump9;
+	var pump10;
+	var pump11;
+	var pump12;
+	var pump13;
+	var pump14;
+	var pump15;
+	var pump16;  // End of pumps availabe for water transfer
+	this.counter_2 = 0;
+	// This is the array that contains the pumps in activity, 
+	//each selected checkBox/pumpFlow is pushed to this array. 
+	var pumpInAction = [];
+	// 
+	var formatText = "Selected pumps: ".bold().fontcolor("#7A7A7A");
+	var totalFlowText = "Total flow: ".bold().italics().fontcolor("#7A7A7A"); 
+	document.getElementById("novo").innerHTML = "";
+	document.getElementById("novo2").innerHTML = "";
+	document.getElementById("novo3").innerHTML = "";
+	document.getElementById("img").innerHTML = "";
+	var textOutput = document.getElementById("displayText2");
+	var textOutput3 = document.getElementById("displayText3");
+	var textOutput4 = document.getElementById("displayText4");
+		  
+	// Making an array of the checkBoxes/pumps		
+	for (var i = 0; i < group.elements.length; i++) {
+	    // Searching for checked boxes
+	    if (group.elements[i].checked) {
+		// Assigning a value to corresponding pump number of the checked 
+		//box value number and adding that value to the array pumpInAction.
+		if (group.elements[i].value === "Pump number 01 flow = 060") {
+		    pump1 = 60;
+		    pumpInAction.push(pump1);}
+		if (group.elements[i].value === "Pump number 02 flow = 060") {
+		    pump2 = 60;
+		    pumpInAction.push(pump2);}
+		if (group.elements[i].value === "Pump number 03 flow = 060") {
+		    pump3 = 60;
+		    pumpInAction.push(pump3);}
+		if (group.elements[i].value === "Pump number 04 flow = 070") {
+		    pump4 = 70;
+		    pumpInAction.push(pump4);}
+		if (group.elements[i].value === "Pump number 05 flow = 080") {
+		    pump5 = 80;
+		    pumpInAction.push(pump5);}
+		if (group.elements[i].value === "Pump number 06 flow = 075") {
+		    pump6 = 75;
+		    pumpInAction.push(pump6);}
+		if (group.elements[i].value === "Pump number 07 flow = 110") {
+		    pump7 = 110;
+		    pumpInAction.push(pump7);}
+		if (group.elements[i].value === "Pump number 08 flow = 110") {
+		    pump8 = 110;
+		    pumpInAction.push(pump8);}
+		// novo grupo
+		if (group.elements[i].value === "Pump number 09 flow = 060") {
+		    pump9 = 60;
+		    pumpInAction.push(pump9);}
+		if (group.elements[i].value === "Pump number 10 flow = 060") {
+		    pump10 = 60;
+		    pumpInAction.push(pump10);}
+		if (group.elements[i].value === "Pump number 11 flow = 060") {
+		    pump11 = 60;
+		    pumpInAction.push(pump11);}
+		if (group.elements[i].value === "Pump number 12 flow = 070") {
+		    pump12 = 70;
+		    pumpInAction.push(pump12);}
+		if (group.elements[i].value === "Pump number 13 flow = 080") {
+		    pump13 = 80;
+		    pumpInAction.push(pump13);}
+		if (group.elements[i].value === "Pump number 14 flow = 075") {
+		    pump14 = 75;
+		    pumpInAction.push(pump14);}
+		if (group.elements[i].value === "Pump number 15 flow = 110") {
+		    pump15 = 110;
+		    pumpInAction.push(pump15);}
+		if (group.elements[i].value === "Pump number 16 flow = 110") {
+		    pump16 = 110;
+		    pumpInAction.push(pump16);}
+
+		var pumpNumberAndFlow = "<br>" + "<br>" + group.elements[i].value + " " + "t/h";
+		formatText += pumpNumberAndFlow;  
+	    }
+	         
+	}
+	// Looping throw pumpInAction array and making a sum of all elements, this sum 
+        //corresponds to the water flow pumped from the storage tank to distribution tanks
+	for (var i = 0; i < pumpInAction.length; i++) {
+	   this.counter_2 += pumpInAction[i];
+	}
+	
+	// Formating text
+	
+	textOutput.innerHTML = formatText + " " + "<br><hr width='250em' align='left' color='#171715'>" + totalFlowText + this.counter_2.toString().bold() + " t/h" + "<p>";
+	 
+    },
+
+      
+    // SIMULATING LEVEL EVOLUTION IN RELATION WITH PRODUCTION AND PUMPING.
+    simulator: function(){
+	var totalProduction = this.counter_1;
+	var totalPumpFlow = this.counter_2;
+	var max = document.getElementById("max");
+	var storageTankMaxLevel = max.options[max.selectedIndex].value;
+	var min = document.getElementById("min");
+	var storageTankMinLevel = min.options[min.selectedIndex].value; 
+	var levelIs = "Actual level: ";
+	var willTargetMaxOrMin = "  Maximum Level in: ";
+	var timeRange = " hours."
+	var actualLevel = Number(actualevel.getlevel.value);
+	var placeToText5 = document.getElementById("displayText5");
+
+	this.counter_3 = 0;
+	var increasingLevelPerHour = totalProduction - totalPumpFlow;
+	var i;
+
+	// Increasing level
+	if (totalProduction > totalPumpFlow) {
+	   
+	    for (i = actualLevel; i <= storageTankMaxLevel; i += increasingLevelPerHour) {
+		this.counter_3 += 1;
+	    } 
+	    
+	
+	    if (this.counter_3 <=1) {
+		timeRange = " hour.";
+	    }
+
+	    if (i >= storageTankMaxLevel) {
+		var exceededTones = i - storageTankMaxLevel;
+		var enoughTones = increasingLevelPerHour - exceededTones;
+		var suplementarTime = (enoughTones / increasingLevelPerHour) * 60;
+		this.counter_3 = this.counter_3 - 1;
+	    }
+	}
+        
+        // Descreasing level
+	else if (totalProduction < totalPumpFlow) {
+	    increasingLevelPerHour = totalPumpFlow - totalProduction;
+	    for (i = actualLevel; i >= storageTankMinLevel; i -= increasingLevelPerHour) {
+		this.counter_3 += 1;
+		willTargetMaxOrMin =  willTargetMaxOrMin.replace("Maximum", "Minimum");
+	    }
+	    if (this.counter_3 <=1) {
+		timeRange = " hour.";
+	    } 
+    
+	    if (i <= storageTankMinLevel) {
+		exceededTones = storageTankMinLevel - i;
+		enoughTones = increasingLevelPerHour - exceededTones;
+		suplementarTime = (enoughTones / increasingLevelPerHour) * 60;
+		
+		this.counter_3 = this.counter_3 - 1;  
+	    }  
+	}
+
+	// VALIDATES FIELDS 
+	if (actualLevel == "") {
+	    placeToText5.innerHTML = "Field actual Level is empty!".fontcolor("#991F00");
+	}
+	else if (isNaN(actualLevel)) {
+	    placeToText5.innerHTML = "This field accepts only numbers!".fontcolor("#991F00");
+	}
+	else if (actualLevel < storageTankMinLevel) {
+	    placeToText5.innerHTML = "Actual level must be equal or higher than Min level!".fontcolor("#991F00");
+	}
+	else if (isNaN(this.counter_1)) {
+	    placeToText5.innerHTML = "Fields RO accepts only Numbers!".fontcolor("#991F00");
+	}
+	else if (isNaN(suplementarTime)) {
+	    placeToText5.innerHTML = "Please, select at least one pump!".fontcolor("#991F00");
+	}
+	else {
+	placeToText5.innerHTML = "&nbsp" + levelIs + actualLevel + " m3. " + willTargetMaxOrMin + this.counter_3 + "h " + Math.round(suplementarTime) + "m";
+	    }
+    },
+   
+     // Calling all methods               	               
+    generalCall: function() {
+	//waterProduction.minLevel();
+	waterProduction.production(document.textfields);
+	waterProduction.activePumps(document.boxes);
+	waterProduction.simulator();
+    },
+
+    resetCall: function() {
+	textfields.reset();
+	actualevel.reset();
+	boxes.reset();
+    }
+
+}; 
+
