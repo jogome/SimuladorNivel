@@ -40,23 +40,8 @@ var  waterProduction = {
     // PUMPS AVAILABLE FOR WATER TRANSFER AND CHECKED PUMPS AND RESPECTIVE FLOW.
     activePumps: function(group) {                          	
 	// Pumps available to transfer the water
-	var pump1;
-	var pump2;
-	var pump3;
-	var pump4;
-	var pump5;
-	var pump6;
-	var pump7;
-	var pump8;
-	var pump9;
-	var pump10;
-	var pump11;
-	var pump12;
-	var pump13;
-	var pump14;
-	var pump15;
-	var pump16;
-	var pump17;   // End of pumps availabe for water transfer
+	var pump1, pump2, pump3, pump4, pump5, pump6, pump7, pump8, pump9, pump10, pump11, pump12, pump13, pump14, pump15, pump16, pump17;  
+	 // End of pumps availabe for water transfer
 	this.counter_2 = 0;
 	// This is the array that contains the pumps in activity, 
 	//each selected checkBox/pumpFlow is pushed to this array. 
